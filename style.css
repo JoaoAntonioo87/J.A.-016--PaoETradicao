@@ -47,7 +47,38 @@ a {
   font-size: 2rem;
 }
 
-.header ul {
+.header nav {
   position: relative;
+}
+
+.header ul {
   display: flex;
+  align-items: center;
+}
+
+.header ul,
+.header ul::after,
+.header ul::before {
+  content: "";
+  background-color: #000;
+  width: 32px;
+  height: 2px;
+  position: absolute;
+  right: 0;
+}
+
+.header ul::after {
+  top: 10px;
+}
+
+.header ul::before {
+  top: -10px;
+}
+
+.header li {
+  opacity: 0;
+}
+
+.header li a {
+  display: none;
 }
