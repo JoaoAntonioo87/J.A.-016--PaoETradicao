@@ -6,8 +6,6 @@ const navHeader = Array.from(
 
 navHeader.forEach((element) => {
   element.addEventListener("click", function (event) {
-    console.log("funcionou");
+    element.classList.toggle("active");
   });
 });
-
-console.log(navHeader);
