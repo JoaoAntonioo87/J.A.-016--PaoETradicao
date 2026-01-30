@@ -55,12 +55,16 @@ a {
 
 /* MENU HAMBURGUER */
 
-.header li a {
-  position: absolute;
-  right: 10000px;
+.header ul {
+  transition: all 0.3s;
 }
 
-.header li:first-child,
+.header li a {
+  opacity: 0;
+  font-family: "Merriweather";
+}
+
+.header ul::before,
 .header li:first-child::after,
 .header li:first-child::before {
   content: "";
@@ -72,38 +76,80 @@ a {
   right: 0;
 }
 
-.header li:first-child {
+.header ul::before {
   top: 6px;
 }
 
 .header li:first-child::before {
-  top: 8px;
+  top: 14px;
 }
 
 .header li:first-child::after {
-  top: 16px;
+  top: 22px;
 }
 
 /* ACTIVE MENU HAMBURGUER */
 
-.header .active li:first-child {
+.header .active ul {
+  background-color: var(--COLOR-4);
+  margin-top: 48px;
+  width: 120px;
+  display: grid;
+  justify-content: center;
   transition: all 0.3s;
-  transform: rotate(45deg);
-  background-color: var(--COLOR-4);
-  top: 14px;
-  width: 40px;
-  height: 4px;
-  right: 0;
+  position: absolute;
+  right: 0px;
 }
 
-.header .active li::after {
-  transform: rotate(-90deg);
-  width: 40px;
-  top: 0px;
-  height: 4px;
-  background-color: var(--COLOR-4);
+.header .active ul li {
+  background-color: rgba(0, 0, 0, 0);
+  height: 32px;
+  padding-top: 12px;
 }
 
-.header .active li::before {
+.header .active ul::before {
   width: 0;
+}
+
+.header .active li:first-child::after {
+  transition: all 0.3s;
+  rotate: 45deg;
+  background-color: var(--COLOR-4);
+  top: -36px;
+  width: 40px;
+  height: 4px;
+}
+
+.header .active li:first-child::before {
+  rotate: -45deg;
+  width: 40px;
+  top: -36px;
+  height: 4px;
+  background-color: var(--COLOR-4);
+}
+
+.header .active li a {
+  opacity: 1;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.header .active li a::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 2px;
+  left: 0;
+  background-color: #b99;
+  bottom: -8px;
+}
+
+.header .active li:last-child a::after {
+  height: 0;
+}
+
+.header .active li a:hover {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
 }
