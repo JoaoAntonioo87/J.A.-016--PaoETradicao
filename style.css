@@ -26,6 +26,12 @@ a {
   --COLOR-2: #ceab93;
   --COLOR-3: #e3caa5;
   --COLOR-4: #fffbe9;
+  --GRAY-1: #ebe9e4;
+  --GRAY-2: #b8b7b2;
+  --GRAY-3: #999894;
+  --GRAY-4: #73726f;
+  --GRAY-5: #4d4c4a;
+  --GRAY-6: #333331;
 }
 
 /* HEADER */
@@ -152,4 +158,64 @@ a {
   font-weight: 700;
   letter-spacing: 0.5px;
   transition: all 0.3s;
+}
+
+/* TABLETS */
+
+@media screen and (min-width: 750px) {
+  .container {
+    max-width: 650px;
+  }
+}
+
+/* LAPTOPS */
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 950px;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .header nav {
+    width: auto;
+    height: auto;
+  }
+
+  .header ul {
+    display: flex;
+  }
+
+  .header li a {
+    opacity: 1;
+    font-size: 1.33rem;
+    color: var(--GRAY-6);
+    transition: all 0.3s;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .header li a:hover {
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    font-weight: 800;
+  }
+
+  .header li:last-child a {
+    color: var(--COLOR-4);
+    letter-spacing: 1px;
+    padding-right: 0;
+  }
+
+  .header li:last-child:hover a {
+    transition: all 0.3s;
+    letter-spacing: 2px;
+  }
+
+  .header ul::before,
+  .header li:first-child::after,
+  .header li:first-child::before {
+    height: 0;
+  }
 }
