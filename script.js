@@ -25,12 +25,11 @@ const imgIntro = document.getElementsByClassName("intro-img");
 let i = 1;
 
 setInterval(() => {
-  if (i === 8) {
+  if (i === 7) {
     imgIntro[0].src = "img/img-01.jpg";
     i = 1;
   } else {
     imgIntro[0].src = `img/img-0${i + 1}.jpg`;
     i = i + 1;
   }
-  console.log(i);
-}, 5000);
+}, 2000);

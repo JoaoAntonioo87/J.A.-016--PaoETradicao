@@ -164,6 +164,14 @@ img {
   transition: all 0.3s;
 }
 
+/* INTRO */
+
+.intro-img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* TABLETS */
 
 @media screen and (min-width: 750px) {
