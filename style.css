@@ -109,6 +109,7 @@ img {
   transition: all 0.3s;
   position: absolute;
   right: 0px;
+  z-index: 1;
 }
 
 .header .active ul li {
