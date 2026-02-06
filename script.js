@@ -38,4 +38,4 @@ setInterval(() => {
     imgIntro[0].src = `img/img-0${i + 1}.jpg`;
     i = i + 1;
   }
-}, 2000);
+}, 2500);
