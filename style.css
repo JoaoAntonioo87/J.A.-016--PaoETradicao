@@ -181,9 +181,10 @@ img {
 .intro-text {
   position: absolute;
   text-align: center;
-  width: 100%;
   top: 33%;
   left: 10%;
+  width: 80%;
+  height: 100%;
 }
 
 .intro-text h1 {
@@ -196,6 +197,7 @@ img {
   font-family: "Merriweather";
   color: var(--GRAY-2);
   font-size: 1.33rem;
+  margin-top: 1rem;
 }
 
 /* TABLETS */
@@ -255,5 +257,17 @@ img {
   .header li:first-child::after,
   .header li:first-child::before {
     height: 0;
+  }
+
+  .intro-img {
+    height: 750px;
+  }
+
+  .intro-text h1 {
+    font-size: 6rem;
+  }
+
+  .intro-text p {
+    font-size: 2rem;
   }
 }
