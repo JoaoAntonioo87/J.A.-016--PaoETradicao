@@ -166,10 +166,35 @@ img {
 
 /* INTRO */
 
+.intro {
+  position: relative;
+}
+
 .intro-img {
   height: 500px;
   width: 100%;
   object-fit: cover;
+  filter: brightness(45%);
+}
+
+.intro-text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 33%;
+  left: 10%;
+}
+
+.intro-text h1 {
+  font-family: "Cookie";
+  font-size: 4rem;
+  color: var(--COLOR-4);
+}
+
+.intro-text p {
+  font-family: "Merriweather";
+  color: var(--GRAY-2);
+  font-size: 1.33rem;
 }
 
 /* TABLETS */
