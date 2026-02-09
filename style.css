@@ -200,6 +200,28 @@ img {
   margin-top: 1rem;
 }
 
+.intro-text a {
+  font-family: "Merriweather";
+  background-color: var(--COLOR-1);
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--GRAY-1);
+  transition: all 0.3s;
+  box-shadow: 0 4px 16px var(--GRAY-6);
+}
+
+.intro-text a:hover,
+.intro-text a:focus {
+  background-color: var(--COLOR-2);
+  transition: all 0.3s;
+  letter-spacing: 1px;
+  font-weight: 900;
+  box-shadow: 0 6px 16px #000;
+}
+
 /* TABLETS */
 
 @media screen and (min-width: 750px) {
