@@ -39,3 +39,19 @@ setInterval(() => {
     i = i + 1;
   }
 }, 2500);
+
+// SLIDE ANIMATIONS
+
+const slideElements = Array.from(document.querySelectorAll("[data-slide]"));
+
+window.addEventListener("scroll", () => {
+  slideElements.forEach((element) => {
+    if (window.outerHeight + window.scrollY > element.offsetTop + 200) {
+      element.classList.add("active");
+    }
+  });
+});
+
+console.log(window.outerHeight);
+console.log(window.scrollY);
+console.log(slideElements[0].offsetTop + 200);

@@ -24,6 +24,67 @@ img {
   margin: 0 auto;
 }
 
+[data-slide] {
+  opacity: 0;
+}
+
+[data-slide="down"].active {
+  animation: slideTop 0.5s;
+  opacity: 1;
+}
+[data-slide="rigth"].active {
+  animation: slideRight 0.5s;
+  opacity: 1;
+}
+[data-slide="left"].active {
+  animation: slideLeft 0.5s;
+  opacity: 1;
+}
+[data-slide="down"].active {
+  animation: slideDown 0.5s;
+  opacity: 1;
+}
+
+/* ANIMATIONS */
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 /* VARIABLES */
 :root {
   --COLOR-1: #ad8b73;
