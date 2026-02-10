@@ -20,9 +20,11 @@ img {
 }
 
 .container {
-  max-width: 350px;
+  max-width: 300px;
   margin: 0 auto;
 }
+
+/* SLIDES */
 
 [data-slide] {
   opacity: 0;
@@ -119,7 +121,6 @@ img {
 }
 
 .header nav {
-  width: 32px;
   height: 32px;
   position: relative;
 }
@@ -242,7 +243,7 @@ img {
 .intro-text {
   position: absolute;
   text-align: center;
-  top: 33%;
+  top: 23%;
   left: 10%;
   width: 80%;
 }
@@ -360,6 +361,13 @@ img {
   top: -32px;
 }
 
+/* LARGE MOBILE */
+
+@media screen and (min-width: 400px) {
+  .intro-text {
+    top: 33%;
+  }
+}
 /* TABLETS */
 
 @media screen and (min-width: 750px) {
