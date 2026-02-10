@@ -44,6 +44,18 @@ setInterval(() => {
 
 const slideElements = Array.from(document.querySelectorAll("[data-slide]"));
 
+slideElements.forEach((element) => {
+  if (window.outerHeight > element.offsetTop + 50) {
+    element.dataset.slide = null;
+    element.style.opacity = 1;
+  }
+  if (window.screen.availWidth > 1200) {
+    if (element.dataset.slide === "left" || element.dataset.slide === "rigth") {
+      element.dataset.slide = "down";
+    }
+  }
+});
+
 window.addEventListener("scroll", () => {
   slideElements.forEach((element) => {
     if (window.outerHeight + window.scrollY > element.offsetTop + 200) {
