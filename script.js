@@ -51,7 +51,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
-console.log(window.outerHeight);
-console.log(window.scrollY);
-console.log(slideElements[0].offsetTop + 200);
