@@ -413,9 +413,9 @@ img {
   display: none;
 }
 
-/* ODD CARDS */
+/* EVEN CARDS */
 
-.product-card:nth-child(odd) {
+.product-card:nth-child(even) {
   border: solid 4px var(--COLOR-3);
   box-shadow: 4px 4px var(--COLOR-1);
   border: 4px solid var(--COLOR-1);
