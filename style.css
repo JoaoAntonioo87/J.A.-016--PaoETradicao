@@ -371,7 +371,7 @@ img {
 .product-text h2 {
   text-align: center;
   font-size: 2rem;
-  color: var(--COLOR-4);
+  color: var(--GRAY-6);
 }
 
 .product-text p {
