@@ -32,19 +32,19 @@ img {
 }
 
 [data-slide="down"].active {
-  animation: slideTop 0.5s;
+  animation: slideTop 0.3s;
   opacity: 1;
 }
-[data-slide="rigth"].active {
-  animation: slideRight 0.5s;
+[data-slide="right"].active {
+  animation: slideRight 0.3s;
   opacity: 1;
 }
 [data-slide="left"].active {
-  animation: slideLeft 0.5s;
+  animation: slideLeft 0.3s;
   opacity: 1;
 }
 [data-slide="down"].active {
-  animation: slideDown 0.5s;
+  animation: slideDown 0.3s;
   opacity: 1;
 }
 
@@ -69,6 +69,7 @@ img {
     transform: translateX(0px);
   }
 }
+
 @keyframes slideLeft {
   0% {
     opacity: 0;
@@ -78,6 +79,7 @@ img {
     transform: translateX(0px);
   }
 }
+
 @keyframes slideDown {
   0% {
     opacity: 0;
