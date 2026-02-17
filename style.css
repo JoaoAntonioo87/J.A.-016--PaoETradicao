@@ -395,7 +395,6 @@ img {
 
 .product-card {
   margin-top: 2rem;
-  border: solid 4px var(--COLOR-4);
   border-radius: 16px;
   padding: 1rem 1.5rem;
   position: relative;
@@ -428,7 +427,6 @@ img {
 /* EVEN CARDS */
 
 .product-card:nth-child(even) {
-  border: solid 4px var(--COLOR-1);
   box-shadow: 4px 4px var(--COLOR-4);
   border: 4px solid var(--COLOR-4);
   background-color: var(--COLOR-1);
@@ -447,6 +445,76 @@ img {
 
 .product-card:nth-child(even):hover {
   box-shadow: 8px 8px var(--COLOR-4);
+}
+
+/* DIFFERENCES */
+
+.differences {
+  margin-top: 32px;
+  display: grid;
+  gap: 24px;
+}
+
+.differences h2 {
+  text-align: center;
+  color: var(--COLOR-1);
+  font-size: 2rem;
+}
+
+.differences-card {
+  background-color: var(--GRAY-3);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  display: grid;
+  gap: 8px;
+  border: 4px solid var(--GRAY-4);
+  box-shadow: 4px 4px var(--GRAY-4);
+  transition: all 0.3s;
+}
+
+.differences-card-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.differences-card h3 {
+  color: #000;
+  font-size: 1.33rem;
+}
+
+.differences-card img {
+  padding: 16px;
+  transition: all 0.3s;
+}
+
+.differences-card p {
+  color: #000;
+  display: none;
+}
+
+/* DIFFERENCES-CARD ODD */
+
+.differences-card:nth-child(odd) {
+  background-color: var(--GRAY-1);
+  border: 4px solid var(--GRAY-2);
+  box-shadow: 4px 4px var(--GRAY-2);
+}
+
+/* ACTIVE DIFFERENCES CARD */
+.differences-card.active {
+  transition: all 0.3s;
+}
+
+.differences-card.active p {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+.differences-card.active img {
+  transform: rotate(180deg);
+  transition: all 0.3s;
 }
 
 /* LARGE MOBILE */
@@ -468,6 +536,10 @@ img {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 24px;
+  }
+
+  .differences-card img {
+    padding: 8px;
   }
 }
 

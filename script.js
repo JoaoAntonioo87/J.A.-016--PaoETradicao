@@ -65,3 +65,15 @@ window.addEventListener(
   },
   { passive: true },
 );
+
+// HANDLE ACCORDION
+
+const accordionElement = Array.from(
+  document.querySelectorAll(".differences-card"),
+);
+
+accordionElement.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.classList.toggle("active");
+  });
+});
