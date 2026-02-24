@@ -7,7 +7,6 @@ if (window.screen.availWidth < 1000) {
     eventsHeaderMenu.forEach((eventName) => {
       element.addEventListener(eventName, (event) => {
         element.classList.toggle("active");
-        console.log("1");
         event.stopPropagation();
       });
     });
