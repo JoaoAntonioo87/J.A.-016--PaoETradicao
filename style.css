@@ -261,11 +261,18 @@ button {
   position: relative;
 }
 
+.intro-img-container {
+  display: flex;
+  overflow: hidden;
+}
+
 .intro-img {
   height: 500px;
-  width: 100%;
+  min-width: 100vw;
   object-fit: cover;
   filter: brightness(45%);
+  position: relative;
+  left: 0;
 }
 
 .intro-text {

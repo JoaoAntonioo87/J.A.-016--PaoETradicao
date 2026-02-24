@@ -1,5 +1,5 @@
 // HEADER MENU
-const navHeader = Array(document.querySelector(".header-nav-links"));
+const navHeader = Array.from(document.querySelector(".header-nav-links"));
 const eventsHeaderMenu = ["click", "touch"];
 
 if (window.screen.availWidth < 1000) {
@@ -22,19 +22,24 @@ if (window.screen.availWidth < 1000) {
 }
 
 // IMAGE INTRO
-const imgIntro = document.querySelector(".intro-img");
-let i = 1;
-let isVisible = false;
+const imgsIntro = Array.from(document.querySelectorAll(".intro-img"));
+const widthDevice = window.outerWidth;
+let counter = 0;
 
-const observer = new IntersectionObserver((entries) => {
-  isVisible = entries[0].isIntersecting;
-});
-observer.observe(imgIntro);
+console.log(window);
 
 setInterval(() => {
-  if (!isVisible) return;
-  imgIntro.src = i === 7 ? "img/img-01.jpg" : `img/img-0${i + 1}.jpg`;
-  i = i === 7 ? 1 : i + 1;
+  if (counter < widthDevice * (imgsIntro.length - 1)) {
+    counter = counter + widthDevice;
+    imgsIntro.forEach((element) => {
+      element.style.left = -counter + "px";
+    });
+  } else {
+    imgsIntro.forEach((element) => {
+      element.style.left = 0;
+      counter = 0;
+    });
+  }
 }, 2500);
 
 // SLIDE ANIMATIONS
