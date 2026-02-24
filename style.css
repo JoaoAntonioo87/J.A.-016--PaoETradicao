@@ -662,7 +662,7 @@ button {
   }
 
   .form div {
-    width: 80%;
+    width: 100%;
   }
 
   .form label {
@@ -688,7 +688,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1180px;
+    max-width: 1000px;
   }
 
   .logo {
@@ -769,10 +769,6 @@ button {
     object-fit: cover;
   }
 
-  .differences-card {
-    margin: 0 4rem;
-  }
-
   .differences-card p {
     max-width: 75ch;
     margin-left: 1rem;
@@ -781,6 +777,7 @@ button {
   .form {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    gap: 0 2rem;
   }
 
   .form label {
@@ -792,7 +789,7 @@ button {
   }
 
   .form textarea {
-    height: 200px;
+    height: 220px;
   }
 
   .form button {
