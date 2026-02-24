@@ -20,6 +20,32 @@ img {
   max-width: 100%;
 }
 
+label,
+button {
+  display: block;
+}
+
+input,
+textarea {
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--GRAY-3);
+  font-weight: 400;
+}
+
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .container {
   max-width: 300px;
   margin: 0 auto;
@@ -517,6 +543,96 @@ img {
   transition: all 0.3s;
 }
 
+/* CONTACT */
+
+.contact {
+  margin-top: 32px;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--COLOR-1);
+}
+
+.form {
+  margin-top: 24px;
+  display: grid;
+}
+
+.form label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--GRAY-5);
+  margin-top: 1rem;
+}
+
+.form div:first-child label:first-child {
+  margin-top: 0;
+}
+
+.form input,
+.form textarea {
+  font-size: 1.1rem;
+  color: var(--GRAY-5);
+  padding: 8px 0;
+  text-indent: 8px;
+  border-radius: 8px;
+  border: 2px solid var(--GRAY-6);
+  box-shadow: 4px 4px var(--GRAY-6);
+  transition: all 0.3s;
+  resize: none;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.form input:hover,
+.form textarea:hover {
+  box-shadow: 8px 8px var(--GRAY-6);
+}
+
+.form input:focus,
+.form textarea:focus {
+  border: 2px solid var(--COLOR-1);
+  box-shadow: 8px 8px var(--COLOR-1);
+  transition: all 0.3s;
+}
+
+.form button {
+  font-size: 1.25rem;
+  margin: 16px 0;
+  padding: 16px;
+  background-color: var(--COLOR-3);
+  border: 2px solid var(--COLOR-2);
+  box-shadow: 4px 4px var(--COLOR-1);
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.form button:focus,
+.form button:hover {
+  letter-spacing: 2px;
+  font-weight: 900;
+  box-shadow: 8px 8px var(--COLOR-1);
+  transition: all 0.3s;
+}
+
+.map {
+  border-radius: 16px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.address {
+  font-size: 1.33rem;
+  text-align: center;
+  margin-top: 8px;
+  color: var(--GRAY-5);
+}
+
 /* LARGE MOBILE */
 
 @media screen and (min-width: 400px) {
@@ -540,6 +656,32 @@ img {
 
   .differences-card img {
     padding: 8px;
+  }
+
+  .form {
+    justify-items: center;
+  }
+
+  .form div {
+    width: 80%;
+  }
+
+  .form label {
+    font-size: 1.33rem;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 1.25rem;
+  }
+
+  .form textarea {
+    height: 100px;
+  }
+
+  .form button {
+    max-width: 150px;
+    justify-self: center;
   }
 }
 
@@ -635,5 +777,27 @@ img {
   .differences-card p {
     max-width: 75ch;
     margin-left: 1rem;
+  }
+
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .form label {
+    font-size: 1.33rem;
+  }
+
+  .form label:first-child {
+    margin-top: 0;
+  }
+
+  .form textarea {
+    height: 200px;
+  }
+
+  .form button {
+    grid-column: 1/-1;
+    margin-top: 32px;
   }
 }
