@@ -1,12 +1,23 @@
 // HEADER MENU
-const navHeader = document.querySelector(".header-nav-links");
+const navHeader = Array(document.querySelector(".header-nav-links"));
 const eventsHeaderMenu = ["click", "touch"];
 
 if (window.screen.availWidth < 1000) {
-  eventsHeaderMenu.forEach((eventName) => {
-    navHeader.addEventListener(eventName, (event) => {
-      navHeader.classList.toggle("active");
-      event.stopPropagation();
+  navHeader.forEach((element) => {
+    eventsHeaderMenu.forEach((eventName) => {
+      element.addEventListener(eventName, (event) => {
+        element.classList.toggle("active");
+        console.log("1");
+        event.stopPropagation();
+      });
+    });
+
+    eventsHeaderMenu.forEach((eventName) => {
+      window.addEventListener(eventName, (event) => {
+        if (Array.from(navHeader[0].classList).includes("active")) {
+          navHeader[0].classList.remove("active");
+        }
+      });
     });
   });
 }
