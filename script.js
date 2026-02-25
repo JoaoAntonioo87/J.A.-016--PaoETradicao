@@ -1,5 +1,5 @@
 // HEADER MENU
-const navHeader = Array.from(document.querySelector(".header-nav-links"));
+const navHeader = Array(document.querySelector(".header-nav-links"));
 const eventsHeaderMenu = ["click", "touch"];
 
 if (window.screen.availWidth < 1000) {
@@ -25,8 +25,6 @@ if (window.screen.availWidth < 1000) {
 const imgsIntro = Array.from(document.querySelectorAll(".intro-img"));
 const widthDevice = window.outerWidth;
 let counter = 0;
-
-console.log(window);
 
 setInterval(() => {
   if (counter < widthDevice * (imgsIntro.length - 1)) {
