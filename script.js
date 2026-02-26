@@ -90,3 +90,13 @@ accordionElement.forEach((element) => {
     element.classList.toggle("active");
   });
 });
+
+// CHANGE IMAGES SIZE
+
+const allImgs = Array.from(document.querySelectorAll("[src$='webp']"));
+
+allImgs.forEach((image) => {
+  if (window.outerWidth < 750 && image.className == "intro-img") {
+    image.outerHTML = image.outerHTML.replace("desktop", "mobile");
+  }
+});
