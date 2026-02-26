@@ -70,11 +70,11 @@ window.addEventListener(
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       slideElements.forEach((element) => {
-        if (window.outerHeight + window.scrollY > element.offsetTop + 200) {
+        if (window.outerHeight + window.scrollY > element.offsetTop + 100) {
           element.classList.add("active");
         }
       });
-    }, 100);
+    }, 50);
   },
   { passive: true },
 );
