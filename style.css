@@ -553,7 +553,18 @@ button {
 /* CONTACT */
 
 .contact {
-  margin-top: 32px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: var(--COLOR-2);
 }
 
 .contact h2 {
