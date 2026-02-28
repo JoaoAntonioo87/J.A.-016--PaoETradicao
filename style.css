@@ -650,11 +650,64 @@ button {
   color: var(--GRAY-5);
 }
 
+/* FOOTER */
+
+.footer {
+  background-color: var(--COLOR-2);
+  margin-top: 32px;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  font-family: "Cookie";
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer img {
+  display: none;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-list img {
+  display: none;
+}
+
+.footer-list a {
+  color: var(--GRAY-6);
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.footer-list li + li a::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  top: -8px;
+  height: 2px;
+  background-color: var(--GRAY-4);
+}
+
 /* LARGE MOBILE */
 
 @media screen and (min-width: 400px) {
   .intro-text {
     top: 33%;
+  }
+
+  .footer-list li + li a::before {
+    width: 0;
   }
 }
 
@@ -699,6 +752,38 @@ button {
   .form button {
     max-width: 150px;
     justify-self: center;
+  }
+
+  .footer img {
+    display: block;
+    width: 50px;
+    margin-top: 1rem;
+    margin-left: 50px;
+  }
+
+  .footer-list {
+    flex-direction: row;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .footer-list img {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+  }
+
+  .footer-list a {
+    transition: all 0.3s;
+  }
+
+  .footer-list a:hover,
+  .footer-list a:focus {
+    transition: all 0.3s;
+    color: var(--COLOR-4);
+    letter-spacing: 1px;
+    font-weight: 800;
   }
 }
 
