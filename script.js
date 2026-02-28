@@ -23,8 +23,10 @@ if (window.screen.availWidth < 1000) {
 
 // IMAGE INTRO
 const imgsIntro = Array.from(document.querySelectorAll(".intro-img"));
-const widthDevice = window.outerWidth;
+const widthDevice = window.innerWidth;
 let counter = 0;
+
+console.log(widthDevice);
 
 setInterval(() => {
   if (counter < widthDevice * (imgsIntro.length - 1)) {
