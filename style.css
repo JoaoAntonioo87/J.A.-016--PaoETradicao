@@ -255,6 +255,40 @@ button {
   transition: all 0.3s;
 }
 
+/* WHATSAPP LOGO */
+
+.whatsapp-logo {
+  z-index: 2;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-logo a {
+  display: block;
+  background-color: var(--GRAY-1);
+  border: 4px solid var(--COLOR-1);
+  box-shadow: 4px 4px var(--COLOR-2);
+  border-radius: 16px;
+  padding: 0.5rem;
+  opacity: 0.95;
+  transform: translateX(70vw);
+  animation: animateWhats 6s ease-in-out forwards 2s;
+}
+
+.whatsapp-link-img {
+  width: 40px;
+}
+
+@keyframes animateWhats {
+  10% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* INTRO */
 
 .intro {
@@ -790,6 +824,10 @@ button {
 /* LAPTOPS */
 
 @media screen and (min-width: 1200px) {
+  .whatsapp-link-img {
+    width: 64px;
+  }
+
   .container {
     max-width: 1000px;
   }
