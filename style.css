@@ -51,6 +51,48 @@ button {
   margin: 0 auto;
 }
 
+/* DETAILS */
+
+.detail-container {
+  position: relative;
+}
+
+.detail-icon {
+  position: absolute;
+}
+
+.right {
+  right: 5vw;
+}
+
+.left {
+  left: 5vw;
+}
+
+#detail-about-behind-01 {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(1%) saturate(3025%)
+    hue-rotate(350deg) brightness(120%) contrast(123%);
+  width: 350px;
+  top: -1100px;
+  z-index: -1;
+}
+
+#detail-about-behind-02 {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(1%) saturate(3025%)
+    hue-rotate(350deg) brightness(120%) contrast(123%);
+  width: 350px;
+  top: -600px;
+  z-index: -1;
+}
+
+#detail-about--products {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(21%) saturate(455%)
+    hue-rotate(345deg) brightness(93%) contrast(90%);
+  width: 64px;
+  top: 32px;
+  transform: rotate(-45deg);
+}
+
 /* SLIDES */
 
 [data-slide] {
@@ -748,6 +790,14 @@ button {
 /* TABLETS */
 
 @media screen and (min-width: 750px) {
+  #detail-about-behind-01 {
+    top: -800px;
+  }
+
+  #detail-about-behind-02 {
+    top: -400px;
+  }
+
   .container {
     max-width: 650px;
   }
@@ -824,6 +874,14 @@ button {
 /* LAPTOPS */
 
 @media screen and (min-width: 1200px) {
+  #detail-about-behind-01 {
+    top: -200px;
+  }
+
+  #detail-about-behind-02 {
+    top: -800px;
+  }
+
   .whatsapp-link-img {
     width: 64px;
   }
