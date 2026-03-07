@@ -601,6 +601,22 @@ button {
   gap: 24px;
 }
 
+#detail-differences-01,
+#detail-differences-02 {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(1%) saturate(3025%)
+    hue-rotate(350deg) brightness(120%) contrast(123%);
+  width: 350px;
+}
+
+#detail-differences-01 {
+  top: -600px;
+}
+
+#detail-differences-02 {
+  top: 300px;
+  transform: rotate(180deg);
+}
+
 .differences h2 {
   text-align: center;
   color: var(--COLOR-1);
