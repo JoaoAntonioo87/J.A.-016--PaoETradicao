@@ -21,6 +21,23 @@ if (window.screen.availWidth < 1000) {
   });
 }
 
+// SMOTH SCROLL
+
+const internalLinks = document.querySelectorAll("[href^='#']");
+
+internalLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const target = document.querySelector(
+      "." + link.getAttribute("href").replace("#", ""),
+    );
+
+    window.scroll({
+      top: target ? target.offsetTop : 0,
+      behavior: "smooth",
+    });
+  });
+});
+
 // IMAGE INTRO
 const imgsIntro = Array.from(document.querySelectorAll(".intro-img"));
 const widthDevice = window.innerWidth;

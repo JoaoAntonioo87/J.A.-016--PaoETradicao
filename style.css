@@ -181,7 +181,7 @@ button {
 }
 
 .header li a {
-  opacity: 0;
+  display: none;
 }
 
 .header ul::before,
@@ -250,7 +250,7 @@ button {
 }
 
 .header .active li a {
-  opacity: 1;
+  display: block;
   transition: all 0.3s;
   position: relative;
 }
@@ -961,7 +961,7 @@ button {
   }
 
   .header li a {
-    opacity: 1;
+    display: block;
     font-size: 1.33rem;
     color: var(--GRAY-6);
     transition: all 0.3s;
