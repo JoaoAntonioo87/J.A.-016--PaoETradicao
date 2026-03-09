@@ -27,12 +27,12 @@ const internalLinks = document.querySelectorAll("[href^='#']");
 
 internalLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    const target = document.querySelector(
-      "." + link.getAttribute("href").replace("#", ""),
+    const target = document.getElementsByClassName(
+      link.getAttribute("href").replace("#", ""),
     );
 
     window.scroll({
-      top: target ? target.offsetTop : 0,
+      top: target[0] ? target[0].offsetTop : 0,
       behavior: "smooth",
     });
   });
