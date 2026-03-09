@@ -47,7 +47,7 @@ setInterval(() => {
   if (counter < widthDevice * (imgsIntro.length - 1)) {
     counter = counter + widthDevice;
     imgsIntro.forEach((element) => {
-      element.style.left = -counter + "px";
+      element.style.transform = `translateX(-${counter}px)`;
     });
   } else {
     imgsIntro.forEach((element) => {
@@ -113,7 +113,7 @@ accordionElement.forEach((element) => {
 const allImgs = Array.from(document.querySelectorAll("[src$='webp']"));
 
 allImgs.forEach((image) => {
-  if (window.outerWidth < 750 && image.className == "intro-img") {
-    image.outerHTML = image.outerHTML.replace("desktop", "mobile");
+  if (window.outerWidth > 750 && image.className == "intro-img") {
+    image.outerHTML = image.outerHTML.replace("mobile", "desktop");
   }
 });

@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-display: swap;
   font-family: "Merriweather";
 }
 
@@ -495,7 +496,7 @@ button {
 }
 
 .product-waves {
-  background-image: url(./img/icons/wave.svg);
+  background-image: url(../img/icons/wave.svg);
   opacity: 0.5;
   background-size: cover;
   position: absolute;

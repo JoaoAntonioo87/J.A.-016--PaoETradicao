@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/style.css">
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" as="style">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Merriweather:opsz,wght@18..144,300..900&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="./img/desktop/img-01.webp">
 
   <title>J.A. 016 - Pão e Tradição</title>
 </head>
@@ -39,13 +39,13 @@
   <main class="main">
     <article class="intro">
       <picture class="intro-img-container">
-        <img src="./img/desktop/img-01.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img">
-        <img src="./img/desktop/img-02.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img">
-        <img src="./img/desktop/img-03.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img">
-        <img src="./img/desktop/img-04.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img">
-        <img src="./img/desktop/img-05.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img">
-        <img src="./img/desktop/img-06.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img">
-        <img src="./img/desktop/img-07.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img">
+        <img src="./img/mobile/img-01.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img" width="375" height="500" fetchpriority="high" decoding="async" srcset="./img/mobile/img-01.webp 200w, ./img/desktop/img-01.webp 750w">
+        <img src="./img/mobile/img-02.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img" width="375" height="500" loading="lazy">
+        <img src="./img/mobile/img-03.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img" width="375" height="500" loading="lazy">
+        <img src="./img/mobile/img-04.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img" width="375" height="500" loading="lazy">
+        <img src="./img/mobile/img-05.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img" width="375" height="500" loading="lazy">
+        <img src="./img/mobile/img-06.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img" width="375" height="500" loading="lazy">
+        <img src="./img/mobile/img-07.webp" alt="Imagens da padaria Pão & Tradição" class="intro-img" width="375" height="500" loading="lazy">
       </picture>
       <div class="intro-text">
         <h1>Pão & Tradição</h1>
@@ -216,7 +216,7 @@
     </section>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </body>
 
 </html>
