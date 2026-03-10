@@ -63,10 +63,6 @@ const slideElements = document.querySelectorAll("[data-slide]");
 if ("requestIdleCallback" in window) {
   requestIdleCallback(() => {
     slideElements.forEach((element) => {
-      if (window.outerHeight > element.offsetTop + 50) {
-        element.dataset.slide = null;
-        element.style.opacity = 1;
-      }
       if (window.screen.availWidth > 1200) {
         if (
           element.dataset.slide === "left" ||
@@ -87,7 +83,10 @@ window.addEventListener(
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       slideElements.forEach((element) => {
-        if (window.outerHeight + window.scrollY > element.offsetTop + 100) {
+        if (
+          element.getBoundingClientRect()["y"] + window.scrollY <
+          window.scrollY + window.innerHeight
+        ) {
           element.classList.add("active");
         }
       });
