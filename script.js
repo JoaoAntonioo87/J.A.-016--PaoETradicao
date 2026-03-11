@@ -38,25 +38,6 @@ internalLinks.forEach((link) => {
   });
 });
 
-// IMAGE INTRO
-const imgsIntro = Array.from(document.querySelectorAll(".intro-img"));
-const widthDevice = window.innerWidth;
-let counter = 0;
-
-setInterval(() => {
-  if (counter < widthDevice * (imgsIntro.length - 1)) {
-    counter = counter + widthDevice;
-    imgsIntro.forEach((element) => {
-      element.style.left = -counter + "px";
-    });
-  } else {
-    imgsIntro.forEach((element) => {
-      element.style.left = 0;
-      counter = 0;
-    });
-  }
-}, 3000);
-
 // SLIDE ANIMATIONS
 const slideElements = document.querySelectorAll("[data-slide]");
 
@@ -116,3 +97,22 @@ allImgs.forEach((image) => {
     image.outerHTML = image.outerHTML.replace("mobile", "desktop");
   }
 });
+
+// IMAGE INTRO
+const imgsIntro = Array.from(document.querySelectorAll(".intro-img"));
+const widthDevice = window.innerWidth;
+let counter = 0;
+
+setInterval(() => {
+  if (counter < widthDevice * (imgsIntro.length - 1)) {
+    counter = counter + widthDevice;
+    imgsIntro.forEach((element) => {
+      element.style.left = -counter + "px";
+    });
+  } else {
+    imgsIntro.forEach((element) => {
+      element.style.left = 0;
+      counter = 0;
+    });
+  }
+}, 3000);
